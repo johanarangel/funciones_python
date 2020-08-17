@@ -60,7 +60,7 @@ def ordenar(numeros):
             return lista_numeros
 
         else: 
-            print('El valor ingresado no corresponde con los indicados, intente nuevamente')
+            print('El valor ingresado no corresponde con los indicados, intente nuevamente.')
             continue
     
 def lista_aleatoria(inicio, fin, cantidad):

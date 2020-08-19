@@ -41,27 +41,23 @@ def promedio(numeros):
     if numeros == []:
         print('No tiene notas para calcular el promedio, la lista está vacía')
 
-def ordenar(numeros):
-    '''ordena los numeros de menor a mayor'''
+def ordenar(numeros, operador=1):
+    '''ordena los numeros de menor a mayor para el operador uno 
+       ordena los numeros de mayor a menor para el operador dos'''
    
-    consulta = True
+    if operador == 1:
+        lista_numeros = sorted(numeros)
+        print('lista ordenada en forma creciente:', lista_numeros)
+        return lista_numeros
 
-    while consulta:
-        consulta = str(input('Ingrese 1: para ordenar de menor a mayor\n Ingrese 2: para ordenar de mayor a menor\n'))
-        
-        if consulta == '1':
-            lista_numeros = sorted(numeros)
-            print('lista ordenada en forma creciente:', lista_numeros)
-            return lista_numeros
+    elif operador == 2:
+        lista_numeros = sorted(numeros, reverse=True)
+        print('lista ordenada en forma decreciente:', lista_numeros)
+        return lista_numeros
 
-        elif consulta == '2':
-            lista_numeros = sorted(numeros, reverse=True)
-            print('lista ordenada en forma decreciente:', lista_numeros)
-            return lista_numeros
-
-        else: 
-            print('El valor ingresado no corresponde con los indicados, intente nuevamente.')
-            continue
+    else: 
+        print('El operador ingresado no corresponde con los indicados, intente nuevamente.')
+            
     
 def lista_aleatoria(inicio, fin, cantidad):
     mi_lista_aleatorio = []

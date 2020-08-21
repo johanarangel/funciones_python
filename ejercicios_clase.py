@@ -32,14 +32,13 @@ def promedio(numeros):
       # Cuando termine de implementar está función borrar "pass"
     cantidad_numeros = len(numeros)
     sumatoria_numeros = sum(numeros)
-                   
-    for numero in numeros:
-        promedio = sumatoria_numeros / cantidad_numeros
-        print('El promedio de {} es: {}'.format(numeros, round(promedio, 2)))
-        return promedio
         
     if numeros == []:
         print('No tiene notas para calcular el promedio, la lista está vacía')
+    else:
+        promedio = sumatoria_numeros / cantidad_numeros
+        print('El promedio de {} es: {}'.format(numeros, round(promedio, 2)))
+        return promedio
 
 def ordenar(numeros, operador=1):
     '''ordena los numeros de menor a mayor para el operador uno 

@@ -27,20 +27,24 @@ dados_guardados = list()
 cantidad_guardados = list()
 numero_repetido = int()
 segundo_repetido = int()
+dados_guardados = list()
+dados_tirados = list()
+lanzamiento = int()
+nombre_lista = list()
+
 #-------------------Formación de funciones----------
 
 def promedio(numeros):
     '''Función que permite calcular el promedio de varios números'''
     cantidad_numeros = len(numeros)
     sumatoria_numeros = sum(numeros)
-                   
-    for numero in numeros:
+                          
+    if numeros == []:
+        print('No tiene notas para calcular el promedio, la lista está vacía')
+    else:
         promedio = sumatoria_numeros / cantidad_numeros
         print('El promedio de {} es: {}'.format(numeros, round(promedio, 2)))
         return promedio
-        
-    if numeros == []:
-        print('No tiene notas para calcular el promedio, la lista está vacía')
         
 
 def ordenar(numeros, operador=1):
@@ -76,14 +80,18 @@ def contar(lista_numeros, numero):
     cantidad_veces = lista_numeros.count(numero)
     return cantidad_veces
 
-def evaluar_dados(dados_guardados):
+def evaluar_dados(dados_guardados, numero_repetido):
     '''Función que evalúa sin los cinco elementos de una lista son iguales'''
-    for i in dados_guardados:
-        if (len(dados_guardados) == 5 and i == numero_repetido):
+    if dados_guardados == []:
+        return False
+
+    else:
+        if (len(dados_guardados) == 5 and dados_guardados [ 0 ] ==  numero_repetido):
             return True
         else:
-          return False
+            return False
 
+    
 
 if __name__ == "__main__":
 
@@ -97,4 +105,6 @@ if __name__ == "__main__":
     cantidad_numero = contar(lista_numeros, numero)
     print(cantidad_numero)
 
-    evaluar_dados(dados_guardados)
+    evaluar_dados(dados_guardados, numero_repetido)
+
+    

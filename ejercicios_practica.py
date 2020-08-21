@@ -186,7 +186,7 @@ def ej4():
                                             
             print('Dados guardados:', dados_guardados)
 
-            evaluando_resultados = funciones_descriptivas.evaluar_dados(dados_guardados)
+            evaluando_resultados = funciones_descriptivas.evaluar_dados(dados_guardados, numero_repetido)
             if evaluando_resultados == True:
                 print('Ganaste!!! Es Generala!')
             else:
@@ -205,7 +205,7 @@ def ej4():
 
             print('Dados guardados:', dados_guardados)
             
-            evaluando_resultados = funciones_descriptivas.evaluar_dados(dados_guardados)
+            evaluando_resultados = funciones_descriptivas.evaluar_dados(dados_guardados, numero_repetido)
             if evaluando_resultados == True:
                 print('Ganaste!!! Es Generala!')
             else:
@@ -224,7 +224,7 @@ def ej4():
 
             print('Dados guardados:', dados_guardados)
             
-            evaluando_resultados = funciones_descriptivas.evaluar_dados(dados_guardados)
+            evaluando_resultados = funciones_descriptivas.evaluar_dados(dados_guardados, numero_repetido)
             if evaluando_resultados == True:
                 print('Ganaste!!! Es Generala!')
             else:
